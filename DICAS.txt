@@ -1,0 +1,23 @@
+A fonte é independente ou dependente?
+
+-----Independente-----
+--> Reduzir entropia <--
+    L> Move-to-front 
+    L> RLE
+    L> (...)
+--> Metodos para codificaçao antrópica <--
+    L> Huffman
+    L> Aritméticos
+
+------Dependente------
+> Preditor
+> Dicionarios
+--> Reduzir entropia <--
+    L> Move-to-front 
+    L> RLE
+    L> (...)
+--> Metodos para codificaçao antrópica <--
+    L> Huffman
+    L> Aritméticos
+--> Deflate <--
+    L> Dicionarios --> RLE --> Huffman
