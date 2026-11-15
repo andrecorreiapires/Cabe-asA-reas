@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # ==============================================================================
 # 1. CONFIGURAÇÃO E DIVISÃO 50% DESENVOLVIMENTO / 50% TESTE
-# ==============================================================================
+# ===============================================================================
 PASTA_IMAGENS = Path(r"C:\Users\Cristiano\GitHub\Cabe-asA-reas\Folder das imagens")
 FICHEIRO_DIVISAO = Path("divisao_dataset.json")
 SEED = 42  # Garante reprodutibilidade científica para o artigo IEEE
