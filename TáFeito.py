@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 
 # ==============================================================================
 # 1. CONFIGURAÇÃO E DIVISÃO 50% DESENVOLVIMENTO / 50% TESTE
-# ==============================================================================
-PASTA_IMAGENS = Path(r"C:\Users\Utilizador\AppData\Local\GitHubDesktop\app-3.5.8\~\PPP\Cabe-asA-reas\Folder das imagens")
+# ===============================================================================
+PASTA_IMAGENS = Path(r"C:\Users\Cristiano\GitHub\Cabe-asA-reas\Folder das imagens")
 FICHEIRO_DIVISAO = Path("divisao_dataset.json")
 SEED = 42  # Garante reprodutibilidade científica para o artigo IEEE
 
@@ -219,7 +219,7 @@ def apresentar_resultados_e_grafico(metricas: dict):
         "H_Pred_1D_Esquerda": "5. Predição 1D (Esquerda)",
         "H_Pred_2D_Media": "6. Predição 2D (Média)",
         "H_Pred_2D_MED": "7. Predição 2D (MED / JPEG-LS)",
-        "H_RCT_mais_MED": "8. Híbrido (RCT + MED)"
+        "H_RCT_mais_MED": "8. Híbrido (RCT + MED)"  
     }
 
     medias = []
@@ -248,11 +248,11 @@ def apresentar_resultados_e_grafico(metricas: dict):
     plt.ylabel("Entropia Média (bits / símbolo)")
     plt.title("Análise de Entropia, Agrupamento e Predição — Dataset Aerials (Desenvolvimento)")
     plt.xticks(rotation=25, ha="right")
-    plt.ylim(0, 8.5)
+    plt.ylim(0, 8.8)
     plt.grid(axis="y", linestyle="--", alpha=0.6)
 
-    for barra, m in zip(barras, medias):
-        plt.text(barra.get_x() + barra.get_width() / 2, m + 0.15, f"{m:.2f}",
+    for barra, m, s in zip(barras, medias, desvios):
+        plt.text(barra.get_x() + barra.get_width() / 2, m + s + 0.12, f"{m:.2f}",
                  ha="center", va="bottom", fontsize=9, fontweight="bold")
 
     plt.tight_layout()
