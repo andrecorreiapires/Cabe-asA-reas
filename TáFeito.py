@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 # ===============================================================================
 PASTA_IMAGENS = Path(r"Folder das imagens")
 FICHEIRO_DIVISAO = Path("divisao_dataset.json")
-SEED = 42  # Garante reprodutibilidade científica para o artigo IEEE
+SEED = 100  # Garante reprodutibilidade científica para o artigo IEEE
 
 def obter_divisao_dataset(pasta: Path, ficheiro_json: Path, seed: int = 42):
     if not pasta.exists():
